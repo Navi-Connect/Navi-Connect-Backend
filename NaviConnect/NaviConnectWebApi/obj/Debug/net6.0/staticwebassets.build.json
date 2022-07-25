@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "35ZG6Ntdk+LeXuSKhXCtbuhWndqB/F0s2OVITs2+NLU=",
+  "Source": "NaviConnectWebApi",
+  "BasePath": "_content/NaviConnectWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "NaviConnectWebApi\\wwwroot",
+      "Source": "NaviConnectWebApi",
+      "ContentRoot": "C:\\NaviConnect\\Navi-Connect-Backend\\NaviConnect\\NaviConnectWebApi\\wwwroot\\",
+      "BasePath": "_content/NaviConnectWebApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\NaviConnect\\Navi-Connect-Backend\\NaviConnect\\NaviConnectWebApi\\wwwroot\\images\\Без названия.jpg",
+      "SourceId": "NaviConnectWebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\NaviConnect\\Navi-Connect-Backend\\NaviConnect\\NaviConnectWebApi\\wwwroot\\",
+      "BasePath": "_content/NaviConnectWebApi",
+      "RelativePath": "images/Без названия.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Без названия.jpg"
+    }
+  ]
+}
