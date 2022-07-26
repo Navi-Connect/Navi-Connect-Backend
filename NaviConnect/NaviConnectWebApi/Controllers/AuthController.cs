@@ -42,7 +42,7 @@ namespace NaviConnectWebApi.Controllers
             var userName = _userService.GetMyName();
             return Ok(userName);
         }
-
+        
         [HttpPost("register")]
         public async Task<ActionResult> Register([FromForm] UserRegisterRequest request)
         {
