@@ -5,6 +5,18 @@ namespace NaviConnectWebApi.Models;
 
 public class UserRegisterRequest
 {
+    public UserRegisterRequest(string city, string username, string firstName, string lastname, string surName, IFormFile file, string password, string confirmPassword)
+    {
+        City = city;
+        Username = username;
+        FirstName = firstName;
+        Lastname = lastname;
+        SurName = surName;
+        File = file;
+        Password = password;
+        ConfirmPassword = confirmPassword;
+    }
+
     [Required] public string City { get; set; } 
     [Required] 
     public string Username { get; set; } 

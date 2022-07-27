@@ -90,7 +90,7 @@ namespace NaviConnectWebApi.Controllers
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == request.Username);
             
-            if (user.Username != request.Username)
+            if (user?.Username != request.Username)
             {
                 return BadRequest("User not found.");
             }
@@ -141,24 +141,6 @@ namespace NaviConnectWebApi.Controllers
             };
 
             return refreshToken;
-        }
-
-        private async void SetRefreshToken(RefreshToken newRefreshToken)
-        {
-            var cookieOptions = new CookieOptions
-            {
-                HttpOnly = true,
-                Expires = newRefreshToken.Expires
-            };
-            
-            Response.Cookies.Append("refreshToken", newRefreshToken.Token, cookieOptions);
-
-            var user = new User
-            {
-                RefreshToken = newRefreshToken.Token
-            };
-           
-            _context.Users.Add(user);
         }
 
         private string CreateToken(User user)
