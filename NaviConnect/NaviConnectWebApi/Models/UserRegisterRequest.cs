@@ -5,15 +5,14 @@ namespace NaviConnectWebApi.Models;
 
 public class UserRegisterRequest
 {
-    [Required]
-    public string City { get; set; }
+    [Required] public string City { get; set; } = null;
     [Required] 
     public string Username { get; set; } = string.Empty;
-    
-    [Required] 
-    public string FirstName { get; set; }
+
+    [Required] public string FirstName { get; set; } = null;
+
     [Required]
-    public string Lastname { get; set; }
+    public string Lastname { get; set; } = null;
 
     public string SurName { get; set; } = null;
     
@@ -22,7 +21,7 @@ public class UserRegisterRequest
     [Required]
    
     [DataType(DataType.Upload)]
-    public IFormFile File { get; set; }
+    public IFormFile File { get; set; } = null;
     
     [Required, MinLength(6, ErrorMessage = "Please enter at least 6 characters, dude!")]
     public string Password { get; set; } = string.Empty;
