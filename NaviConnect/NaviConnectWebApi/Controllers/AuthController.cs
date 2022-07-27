@@ -21,19 +21,18 @@ namespace NaviConnectWebApi.Controllers
         private readonly IUserService _userService;
         private readonly DataContext _context;
         private readonly IWebHostEnvironment _environment; //Добавляем сервис взаимодействия с файлами в рамках хоста
-        private readonly UploadFileService _uploadFileService; // Добавляем сервис для получения файлов из формы
+        
 
         public AuthController(IConfiguration configuration,
             IUserService userService, 
             DataContext context, 
-            IWebHostEnvironment environment, 
-            UploadFileService uploadFileService)
+            IWebHostEnvironment environment)
         {
             _configuration = configuration;
             _userService = userService;
             _context = context;
             _environment = environment;
-            _uploadFileService = uploadFileService;
+          
         }
 
         [HttpGet, Authorize]
