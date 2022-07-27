@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace NaviConnectWebApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220721091403_Initial")]
+    [Migration("20220727211908_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,6 +55,7 @@ namespace NaviConnectWebApi.Migrations
                         .HasColumnType("bytea");
 
                     b.Property<string>("RefreshToken")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("SurName")

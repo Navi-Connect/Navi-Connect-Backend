@@ -22,7 +22,7 @@ namespace NaviConnectWebApi.Migrations
                     AvatarPath = table.Column<string>(type: "text", nullable: false),
                     PasswordHash = table.Column<byte[]>(type: "bytea", nullable: false),
                     PasswordSalt = table.Column<byte[]>(type: "bytea", nullable: false),
-                    RefreshToken = table.Column<string>(type: "text", nullable: true)
+                    RefreshToken = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {

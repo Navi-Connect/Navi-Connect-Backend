@@ -53,6 +53,7 @@ namespace NaviConnectWebApi.Migrations
                         .HasColumnType("bytea");
 
                     b.Property<string>("RefreshToken")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("SurName")

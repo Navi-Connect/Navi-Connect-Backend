@@ -12,5 +12,5 @@ public class User
     public string AvatarPath { get; set; }
     public byte[] PasswordHash { get; set; }  = new byte[32];
     public byte[] PasswordSalt { get; set; }  = new byte[32];
-    public string? RefreshToken { get; set; }
+    public string RefreshToken { get; set; }
 }

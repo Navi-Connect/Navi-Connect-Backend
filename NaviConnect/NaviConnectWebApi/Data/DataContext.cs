@@ -14,7 +14,7 @@ public class DataContext : DbContext
     {
         base.OnConfiguring(optionsBuilder);
         optionsBuilder
-            .UseNpgsql("Server=127.0.0.1; Port=5432 ; Database=NaviConnect;  User Id=postgres; Password=postgres;");
+            .UseNpgsql("Server=127.0.0.1; Port=5432 ; Database=NaviConnect2;  User Id=postgres; Password=postgres;");
     }
     
     
