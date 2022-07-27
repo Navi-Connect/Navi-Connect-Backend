@@ -62,7 +62,7 @@ namespace NaviConnectWebApi.Controllers
                 {
                     request.File.CopyTo(fileStream);
                     fileStream.Flush();
-                    var photo = Path.GetFullPath(request.File.FileName);
+                    var photo = request.File.FileName;
                     
                      CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
                     
