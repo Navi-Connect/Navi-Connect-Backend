@@ -9,7 +9,7 @@ using NaviConnectWebApi.Services.UserService;
 using Swashbuckle.AspNetCore.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
-
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -48,6 +48,15 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        policy  =>
+        {
+            policy.WithOrigins("http://example.com",
+                "http://www.contoso.com");
+        });
+});
 
 var app = builder.Build();
 
@@ -63,6 +72,8 @@ else
 }
 
 app.UseHttpsRedirection();
+app.UseCors(MyAllowSpecificOrigins);
+
 
 app.UseAuthentication();
 
